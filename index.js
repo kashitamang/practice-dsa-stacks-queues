@@ -40,18 +40,12 @@ class Queue {
         this.#list.push(newItem);
     }
 
-    dequeue() {
-        //dequeue returns the first item and removes it from the list
-
+    get count() {
+        return this.#list.length;
     }
 
-    hasNext() {
-        //hasNext returns boolean that represents whether or not there is a next item (first or second?)
-        return this.#list.hasNext();
-    }
-
-    get list() {
-        return this.#list;
+    get next() {
+        return this.#list[0];
     }
 }
 

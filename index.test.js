@@ -15,13 +15,13 @@ describe("Stack Class", () => {
 });
 
 describe("Queue Class", () => {
-  it("#enqueue should add a new item to the queue", () => {
-    const queue = new Queue();
-    queue.enqueue(1);
-    expect(queue.list[0]).toEqual(1);
-  });
-  it('#hasNext should return true if there is a next item in the list', () => {
-    const queue = new Queue([1, 2, 3]);
-    expect(queue.hasNext()).toEqual(true);
+  describe("Queue Class", () => {
+    it("#enqueue should add an item to the back", () => {
+      const queue = new Queue();
+      queue.enqueue("fox");
+      queue.enqueue("goose");
+      expect(queue.count).toBe(2);
+      expect(queue.next).toBe("fox");
+    });
   });
 });
