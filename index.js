@@ -47,6 +47,7 @@ class Queue {
 
     hasNext() {
         //hasNext returns boolean that represents whether or not there is a next item (first or second?)
+        return this.#list.hasNext();
     }
 
     get list() {

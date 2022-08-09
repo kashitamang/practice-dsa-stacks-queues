@@ -20,4 +20,8 @@ describe("Queue Class", () => {
     queue.enqueue(1);
     expect(queue.list[0]).toEqual(1);
   });
+  it('#hasNext should return true if there is a next item in the list', () => {
+    const queue = new Queue([1, 2, 3]);
+    expect(queue.hasNext()).toEqual(true);
+  });
 });
