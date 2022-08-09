@@ -1,4 +1,4 @@
-const { Stack } = require("./index.js");
+const { Stack, Queue } = require("./index.js");
 describe("Stack Class", () => {
   it("#push should add a new item to the stack ", () => {
     const stack = new Stack();
@@ -11,5 +11,13 @@ describe("Stack Class", () => {
     const stack = new Stack([1, 2, 3]);
     expect(stack.pop()).toEqual(3);
     expect(stack.list).toEqual([1, 2]);
+  });
+});
+
+describe("Queue Class", () => {
+  it("#enqueue should add a new item to the queue", () => {
+    const queue = new Queue();
+    queue.enqueue(1);
+    expect(queue.list[0]).toEqual(1);
   });
 });
