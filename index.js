@@ -36,18 +36,20 @@ class Queue {
 
 
     enqueue(newItem) {
-        //enqueue adds to the line/list
+        //enqueue adds to the back of the line
         this.#list.push(newItem);
     }
 
     dequeue() {
         //dequeue returns the first item and removes it from the list
-
+        return this.#list.shift();
     }
 
     hasNext() {
         //hasNext returns boolean that represents whether or not there is a next item (first or second?)
-        return this.#list.hasNext();
+        if (this.#list.length >= 1){
+            return true;
+        }
     }
 
     get list() {

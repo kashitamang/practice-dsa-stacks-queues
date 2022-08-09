@@ -17,11 +17,17 @@ describe("Stack Class", () => {
 describe("Queue Class", () => {
   it("#enqueue should add a new item to the queue", () => {
     const queue = new Queue();
-    queue.enqueue(1);
-    expect(queue.list[0]).toEqual(1);
+    expect(queue.enqueue(1).toEqual(queue.list[list.length]));
   });
+
+  it('#dequeue should remove the first item from the front of the list and return it', () => {
+    const queue = new Queue([1, 2, 3]);
+    expect(queue.dequeue()).toEqual(1);
+    expect(queue.list).toEqual([2, 3]);
+  });
+
   it('#hasNext should return true if there is a next item in the list', () => {
     const queue = new Queue([1, 2, 3]);
-    expect(queue.hasNext()).toEqual(true);
+    expect(queue.hasNext()).toBe(true);
   });
 });
