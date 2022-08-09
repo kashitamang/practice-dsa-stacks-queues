@@ -12,13 +12,20 @@ class Stack {
 
     pop(){
         //remove the last item
+        return this.#list.pop();
     }
 
     peek(){
         //show us the next in line 
         return this.#list[this.#list.length - 1];
     }
+
+    get list(){
+        return this.#list;
+    }
 }
+
+
 
 class Queue {}
 
